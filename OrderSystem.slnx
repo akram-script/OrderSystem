@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Éléments de solution/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Project Path="InventoryService/InventoryService.csproj" />
+  <Project Path="NotificationService/NotificationService.csproj" />
+  <Project Path="OrderService/OrderService.csproj" />
+  <Project Path="Shared.Messages/Shared.Messages.csproj" />
+</Solution>
