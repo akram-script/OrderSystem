@@ -58,7 +58,6 @@ public abstract class RabbitMqConsumer<T> : BackgroundService where T : class
 
             await _channel.BasicConsumeAsync(QueueName, false, consumer, cancellationToken: stoppingToken);
 
-            // Keep the consumer running
             await Task.Delay(Timeout.Infinite, stoppingToken);
         }
         catch (OperationCanceledException)

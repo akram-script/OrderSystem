@@ -9,11 +9,11 @@ namespace NotificationService.Workers
         protected override string RoutingKey => "orders.confirmed";
         protected override async Task HandleMessage(OrderConfirmedEvent evt)
         {
-            // Replace with real email library (e.g. MailKit) in production
+            //  simulate send email 
             Logger.LogInformation(
             "[EMAIL] Sending confirmation to {Email} for order {Id}",
             evt.CustomerEmail, evt.OrderId);
-            await Task.Delay(50); // simulate send
+            await Task.Delay(50); 
             Logger.LogInformation("Notification sent for order {Id}", evt.OrderId);
         }
     }

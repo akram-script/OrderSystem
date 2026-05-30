@@ -16,7 +16,7 @@ public class RabbitMqPublisher : IAsyncDisposable
 
         // Déclarer l'exchange
         await _channel.ExchangeDeclareAsync("orders", "topic", durable: true);
-        // Add this to InitializeAsync:
+
         await _channel.QueueDeclareAsync(
             queue: "notification.queue",
             durable: true,

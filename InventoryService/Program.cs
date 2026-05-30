@@ -7,7 +7,6 @@ builder.Services.AddHostedService<InventoryWorker>();
 
 var host = builder.Build();
 
-// Initialize the publisher before the host starts
 var publisher = host.Services.GetRequiredService<RabbitMqPublisher>();
 await publisher.InitializeAsync();
 
